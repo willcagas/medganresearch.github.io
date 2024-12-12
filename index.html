@@ -50,7 +50,7 @@
           <h1 class="title is-1 publication-title">Medical Imaging Complexity and its Effects on GAN Performance</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/william-cagas/">William Cagas</a><sup>*1</sup>,
+              <a href="https://orcid.org/0009-0001-1951-1471">William Cagas</a><sup>1*</sup>,
             </span>
             <span class="author-block">
               <a href="https://www.linkedin.com/in/chan-ko-6a25a82b0/">Chan Ko</a><sup>2</sup>,
@@ -62,14 +62,15 @@
               <a href="https://www.linkedin.com/in/shryuk-grandhi-52057531b/">Shryuk Grandhi</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/rishibhattacharya/">Rishi Battacharya</a><sup>5</sup>,
+              <a href="https://www.linkedin.com/in/rishibhattacharya/">Rishi Bhattacharya</a><sup>5</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Kevin Zhu</a><sup>†6</sup>,
+              <a href="http://www.ricardomartinbrualla.com">Michael Lam</a><sup>6†</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Michael Lam</a><sup>†6</sup>
+              <a href="https://homes.cs.washington.edu/~seitz/">Kevin Zhu</a><sup>6†</sup>,
             </span>
+            
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -77,7 +78,7 @@
             <span class="author-block"><sup>2</sup>Staten Island Tech High School,</span>
             <span class="author-block"><sup>3</sup>Nutley High School,</span>
             <span class="author-block"><sup>4</sup>Canyon Crest Academy,</span>
-            <span class="author-block"><sup>5</sup>The Judd School</span>
+            <span class="author-block"><sup>5</sup>The Judd School,</span>
             <span class="author-block"><sup>6</sup>University of California, Berkeley</span>
           </div>
 
@@ -86,7 +87,19 @@
               <small><sup>*</sup>Lead Author</small>,
               <small><sup>†</sup>Senior Author</small>
             </span>
-          </div>          
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="contrib" style="margin-top: 15px; margin-bottom: 5px; display: inline-block;">
+              <small>williamgabriel.cagas@gmail.com, kevin@algoverse.us</small>
+            </span>
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="contrib" style="margin-top: 15px; margin-bottom: 5px; display: inline-block;">
+              <small><em>Published in the GAISynMeD Workshop at the <a href="https://accv2024.org/">Asian Conference on Computer Vision (ACCV) 2024</a></em></small>
+            </span>
+          </div>
           
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -95,7 +108,7 @@
                 <a href="https://openaccess.thecvf.com/content/ACCV2024W/GAISynMeD/papers/Cagas_Medical_Imaging_Complexity_and_its_Effects_on_GAN_Performance_ACCVW_2024_paper.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <img src="/assets/Computer-Vision-Foundation.png" style="width: 25px; height: 25px;" />
+                      <img src="/assets/CVF_Logo.png" style="width: 20px; height: 20px;" />
                   </span>
                   <span>Paper</span>
                 </a>
@@ -119,6 +132,24 @@
                   <span>Code</span>
                   </a>
               </span>
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1Pu9AHaNkzr6nNqkcCjI9_Tmr9VgWfeC0/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <img src="/assets/Drive_Logo.png" style="width: 45px; height: 30px;" />
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1RBwb-Dnxz9joZxnubcs4d5tawCsksltV/view?usp=sharing"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <img src="/assets/Drive_Logo.png" style="width: 45px; height: 30px;" />
+                  </span>
+                  <span>Slides</span>
+                </a>
+              </span>
             </div>
 
           </div>
@@ -130,18 +161,18 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
+    <!-- Problem Statement. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Problem Statement</h2>
         <div class="content has-text-justified">
           <p>
-            The proliferation of machine learning models in diverse clinical applications has led to a growing need for high-fidelity, medical image training data. Such data is often scarce due to cost constraints and privacy concerns. Alleviating this burden, medical image synthesis via generative adversarial networks (GANs) emerged as a powerful method for synthetically generating photo-realistic images based on existing sets of real medical images. However, the exact image set size required to efficiently train such a GAN is unclear. In this work, we experimentally establish benchmarks that measure the relationship between a sample dataset size and the fidelity of the generated images, given the dataset's distribution of image complexities. We analyze statistical metrics based on delentropy, an image complexity measure rooted in Shannon's entropy in information theory. For our pipeline, we conduct experiments with two state-of-the-art GANs, StyleGAN 3 and SPADE-GAN, trained on multiple medical imaging datasets with variable sample sizes. Across both GANs, general performance improved with increasing training set size but suffered with increasing complexity. 
+            The proliferation of machine learning models in diverse clinical applications has led to a growing need for high-quality medical data, often scarce due to patient privacy concerns as well as wet lab and data annotation cost constraints. <strong>Generative Adversarial Networks (GANs)</strong> try to address this problem by synthesizing medical images. However, the optimal training set sizes required to efficiently train a GAN to produce high-fidelity images are unknown. Existing methods primarily emphasize architecture-centric modifications to achieve desired outcomes while paying less attention to data-centric approaches.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+    <!--/ Problem Statement. -->
   </div>
 </section>
 
@@ -151,39 +182,19 @@
     <!-- Introduction -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">1. Introduction</h2>
+        <h2 class="title is-3">Our Focus</h2>
 
         <div class="content has-text-justified">
           <p>
-            Machine learning in healthcare is a rapidly growing field with countless applications [28] including disease diagnosis [24], clinical treatment [26], drug development [19], and mental health [7]. The machine learning models driving these advances require the collection of high-quality, annotated medical training data, which persists as an arduous task due to privacy concerns surrounding sensitive patient data [23] and the time-intensive nature of labeling [5]. To address these issues, synthetic data—artificially generated information mimicking real-world data—has surfaced as a promising solution [8].
+            1. We propose a <strong>data-centric optimization method</strong> for efficient GAN training in medical image synthesis using state-of-the-art GANs—StyleGAN 3 and SPADE-GAN.
           </p>
 
           <p>
-            Currently, generative adversarial networks (GANs) remain one of the leading approaches to synthetic data generation [17]. Since its inception in 2014 [6], GANs have gained increasing attention in the medical research community due to their ability to synthesize medical images [29]. However, achieving results with high fidelity remains a difficult task factoring the lack of medical data and prevalence of smaller datasets in the medical domain. With limited data, a GAN’s efficacy is directly affected with consequences including mode collapse, where the generator produces a limited variety of outputs [20], and overfitting, where the GAN replicates training data rather than generalizing from it [32].
-          </p>
-
-          <p>
-            Various papers such as Wang et al. ’s [31] transfer learning and Robb et al. ’s [25] Few-Shot GAN (FSGAN) have tried addressing these issues as architecture-centric approaches, achieving increased training efficiency only as a result of the changes in a GAN’s structure. However, such approaches are ineffective when making alterations to a GAN’s internal structure are not feasible and when time constraints are present. As such, a data-centric approach by providing the GAN with the optimal amount of data to produce high-quality results is more appropriate. Nevertheless, the exact sample set size required to train state-of-the-art GANs is obscure.
-          </p>
-
-          <p>
-            In this study, we introduce a data-centric optimization method to create efficient GAN training for medical image synthesis. Our approach investigates how the image complexity distribution of a medical image dataset can be utilized as a measure of training difficulty for a GAN. By doing so, we can ascertain a correlation between the image complexities of the training images and the optimal training set sizes by establishing benchmarks that evaluate the relationship between a sample training set size and the fidelity of the generated images. We hypothesize that given a dataset of a specific image complexity distribution, healthcare professionals can reference the closest image fidelity curve to identify the optimal amount of experimental trials to produce superlative results. Ultimately, our approach can avoid both undertraining and wasteful overtraining by constructing a data-efficient, GAN training pipeline.
-          </p>
-
+            2. We base our GAN training guide on the relationship between the <strong>image complexity distribution</strong> of a dataset, and variable training set sizes that correspond to the fidelity of synthetic images.
+          </p>  
         </div>
       </div>
     </div>
-
-    <!-- Figure -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths has-text-justified">
-        <figure class="image" style="margin-top: 20px; margin-bottom: 20px;">
-          <img src="assets/Synthesized_Images.png" alt="Synthesized Images Comparison" style="width: 80%; height: auto; display: block; margin: auto;">
-          <figcaption style="padding-top: 25px;"><strong>Figure 1:</strong> Comparison between original images and synthetic images from StyleGAN 3 and SPADE-GAN based on variable image set sizes.</figcaption>
-        </figure>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -193,13 +204,12 @@
     <!-- Background -->
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered">2. Background</h2>
 
         <!-- GANs -->
-        <h5 class="title is-5 has-text-left">Generative Adversarial Networks (GANs)</h5>
+        <h2 class="title is-3 has-text-centered">Generative Adversarial Networks (GANs)</h2>
         <div class="content has-text-justified">
           <p>
-            Introduced by Goodfellow et al. [6], GANs are a class of generative models that consist of two neural networks: a generator G, which aims to transform its latent variable distribution p⁢(z) to closely resemble the training data distribution p⁢(x), and a discriminator D, which differentiates between the ground truth and data generated by G. Training is an adversarial process where G attempts to deceive D into classifying its outputs as real. This two-player minimax game is represented by the following loss function:
+            GANs are a class of generative models that consist of two neural networks: a generator \( G \), which aims to transform its latent variable distribution \( p⁢(z) \) to closely resemble the training data distribution \( p⁢(x) \), and a discriminator \( D \), which differentiates between the ground truth and data generated by \( G \). Training is an adversarial process where \( G \) attempts to deceive \( D \) into classifying its outputs as real. This two-player minimax game is represented by the following loss function:
           </p>
           
           <!-- Loss Function -->
@@ -208,144 +218,105 @@
             \min_{G} \max_{D} V(D, G) = \mathbb{E}_{x \sim p(x)} [\log D(x)] + \mathbb{E}_{z \sim p(z)} [\log (1−D(G(z)))]
             \]
           </p>
-
-          <p>
-            Many papers have tried to address data scarcity and computational costs in GAN training architecturally. One proposed approach was transfer learning [31], which consists of fine-tuning a pre-trained generator and discriminator to the desired domain. However, if the pre-trained models do not align well with the target domain, this could result in even higher data and computational demands [33]. Another approach, Few-Shot GAN (FSGAN) [25], achieved impressive adaptation even with extremely few training examples, albeit at the cost of prolonged training times. This results in the reduced quality and diversity of the synthetic data when time constraints are present.
-          </p>
         </div>
 
-        <!-- Image Complexity -->
-        <h5 class="title is-5 has-text-left">Image Complexity</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Background -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Measuring Image Complexity</h2>
+
         <div class="content has-text-justified">
           <p>
-            Objectively, image complexity can be defined as the variety of features and details within an image. It has been shown that information entropy is a traditional, heuristic-based method of calculating the complexities of images in small-scale datasets [16].
+            Objectively, image complexity can be defined as the variety of features and details within an image. <strong>Entropy</strong> is a traditional, heuristic-based method of calculating the complexities of images in small-scale datasets. We consider three entropy-based metrics, and reason one to be used as the sole measure of complexity for each image in a medical dataset, with the ultimate goal of finding the image complexity distribution.
           </p>
 
+          <h5 class="title is-5 has-text-left" style="margin-top: 25px; margin-bottom: 0.5em;">1. Shannon Entropy</h5>
           <p>
-            Traditional entropy is a foundational abstraction in information theory introduced by Shannon [27]. Used as a measure of uncertainty or “surprise” in data, it is the variation in the distribution of pixel intensities of an image in grayscale format. The equation is defined as
+            Measures the uncertainty or “surprise” in data, specifically, the variation in the distribution of pixel intensities of an image in grayscale format. The equation is defined as
           </p>
 
           <!-- Entropy Formula -->
           <p>
             \[
-            H = -\sum_{i=0}^{n-1} p_{i} \log_{b}(p_{i})
+            H = -\sum_{i=0}^{n-1} p_{i} \log_{b}(p_{i}),
             \]
           </p>
 
           <p>
-            where \( n \) denotes the number of gray levels (256 for 8-bit images), \( b \) stands for the logarithmic base (returning bits when \( b=2 \)), and \( p_i \) is the probability of a pixel having gray level \( i \). However, although Shannon entropy considers compositional image information, it fails to account for spatial information, specifically the relationship between neighbouring pixels [4].
+            where \( n \) denotes the number of gray levels (256 for 8-bit images), \( b \) stands for the logarithmic base (returning bits when \( b=2 \)), and \( p_i \) is the probability of a pixel having gray level \( i \).
           </p>
 
           <p>
-            Another entropy-based metric, the Gray Level Co-Occurrence Matrix (GLCM) entropy, unlike Shannon entropy, is a measure of how often pairs of pixel values occur in a grayscale image distribution [9]. Taking into account this local spatial information, the GLCM is useful for various textural analysis tasks such as feature extraction for medical image segmentation [14]. The GLCM entropy can be represented as
+            <strong><mark style="background-color: orangered;">Problem:</mark></strong> Although Shannon entropy considers compositional image information, it fails to account for spatial information, specifically the relationship between neighbouring pixels.
+          </p>
+
+          <h5 class="title is-5 has-text-left" style="margin-top: 25px; margin-bottom: 0.5em;">2. Gray Level Co-Occurence Matrix (GLCM) Entropy</h5>
+          <p>
+            Unlike Shannon entropy, measures the randomness between pixel pairs in a grayscale image distribution, therefore considering spatial information as well. Similarly, it is calculated as
           </p>
 
           <!-- GLCM Entropy Formula -->
           <p>
             \[
-            H_{g} = -\sum_{i=0}^{n-1} \sum_{j=0}^{n-1} p(i, j) \log_{b} (p(i, j))
+            H_{g} = -\sum_{i=0}^{n-1} \sum_{j=0}^{n-1} p(i, j) \log_{b} (p(i, j)),
             \]
           </p>
 
           <p>
-            where \( p(i,j) \)  is the probability of two pixels having gray levels \( i \) and \( j \) at a certain angle \( θ \) and distance \( d \) away from each other. Despite GLCM better-capturing complexities within an image, it does not consider spatial patterns and global pixel relationships beyond its adjacent pairing.
+            where \( p(i,j) \)  is the probability of two pixels having gray levels \( i \) and \( j \) at a certain angle \( θ \) and distance \( d \) away from each other. 
           </p>
-        </div>
 
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <!-- Methodology -->
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered">3. Methodology</h2>
-
-        <!-- Image Complexity Metric -->
-        <h3 class="title is-4 has-text-left">3.1 Image Complexity Metric</h3>
-        <div class="content has-text-justified">
           <p>
-            Our approach utilizes Larkin’s delentropy, a metric identical to both the Shannon entropy and the GLCM entropy, but incorporating a new density function known as the deledensity [15]. By analyzing the relationship between the local and global features of an image, delentropy accounts for both an image’s gradient vector field and pixel co-occurrence, encapsulating its spatial information as a whole. The deledensity, as a joint probability function, is formulated as
+            <strong><mark style="background-color: orangered;">Problem:</mark></strong> Despite GLCM better-capturing complexities within an image, it does not consider spatial patterns and pixel relationships beyond its adjacent pairing.
+          </p>
+
+          <h5 class="title is-5 has-text-left" style="margin-top: 25px; margin-bottom: 0.5em;">3. Delentropy</h5>
+          <p>
+            Incorporates a new density function known as the <strong>deledensity</strong>. As a joint probability function, it is formulated as
           </p>
 
           <!-- Deledensity Formula -->
           <p>
             \[
-            p(i,j) = \frac{1}{4 W H} \sum_{w=0}^{W-1} \sum_{h=0}^{H-1} \delta_{i,dx}(w,h) \delta_{j,dy}(w,h)
+            p(i,j) = \frac{1}{4 W H} \sum_{w=0}^{W-1} \sum_{h=0}^{H-1} \delta_{i,d_{x}}(w,h) \delta_{j,d_{y}}(w,h),
             \]
           </p>
 
           <p>
-            where \( dx \) and \( dy \) denote the derivative kernels in the x and y direction, \( \delta \) is the Kronecker delta to describe the binning operation required to generate a histogram, and \( H \) and \( W \) are the image’s dimensions (height and width) [13]. By obtaining this, we can then calculate delentropy as
+            where \( d_{x} \) and \( d_{y} \) denote the derivative kernels in the \( x \) and \( y \) direction, \( \delta \) is the Kronecker delta to describe the binning operation required to generate a histogram, and \( H \) and \( W \) are the image’s dimensions (height and width). By obtaining this, we can then calculate delentropy as
           </p>
 
           <!-- Delentropy Formula -->
           <p>
             \[
-            DE = -\frac{1}{2} \sum_{i=0}^{I-1} \sum_{j=0}^{J-1} p(i,j) \log_{b} p(i,j)
+            DE = -\frac{1}{2} \sum_{i=0}^{I-1} \sum_{j=0}^{J-1} p(i,j) \log_{b} p(i,j),
             \]
           </p>
 
           <p>
-            such that \( I \) and \( J \) represent the number of bins (discrete cells) in the 2D distribution, and the \( \frac{1}{2} \) is derived from Papoulis’ generalized sampling expansion [21].
+            such that \( I \) and \( J \) represent the number of bins (discrete cells) in the 2D distribution, and the \( \frac{1}{2} \) is derived from Papoulis’ generalized sampling expansion.
           </p>
 
           <p>
-            To interpret this measure, yielding a high delentropy suggests an image has a high range of variation in pixel intensities and more sophisticated details. A low delentropy can be interpreted as a result of having a uniform distribution of pixel intensities, indicating simple structure and a less-detailed image.
+            <strong><mark style="background-color: greenyellow;">Solution:</mark></strong> By analyzing the relationship between the local and global features of an image, delentropy accounts for both an image’s gradient vector field and pixel co-occurence, encapsulating both its compositional and spatial information as a whole.
           </p>
 
           <p>
-            Prior to any calculations, each image was preprocessed into an 8-bit, grayscale image. This ensured delentropy was calculated in a consistent, single-channel format throughout each dataset.
+            To interpret this measure, yielding a <strong>high delentropy</strong> suggests an image has more sophisticated details, therefore being <strong>more complex</strong>. A <strong>low delentropy</strong> indicates a <strong>simple structure</strong> and a less-detailed image.
           </p>
+
         </div>
 
-        <!-- GAN Selection -->
-        <h3 class="title is-4 has-text-left">3.2 GAN Selection</h3>
-        <div class="content has-text-justified">
-          <p>
-            Core to the experimental approach was the selection of two state-of-the-art GANs, SPADE-GAN [22] and StyleGAN 3 [11] on which to run the experimental pipeline. These networks have been widely adopted by the medical image synthesis community and empirically observed to produce superior-quality medical images when compared to predecessor GANs [29]. StyleGAN 3’s large community support and wide availability of its code repository along with its numerous configurations for different training settings were taken into account as well.
-          </p>
-        </div>
-
-        <!-- GAN Pipeline -->
-        <h3 class="title is-4 has-text-left">3.3 GAN Pipeline</h3>
-        <div class="content has-text-justified">
-          <p>
-            For experiments, given our data-centric approach, StyleGAN 3 and SPADE-GAN were run with the official, publicly available implementations with default hyperparameters and no augmentations to each network’s architecture.
-          </p>
-
-          <h5 class="title is-5 has-text-left" style="margin-top: 0; margin-bottom: 0.5em;">Preprocessing</h5>
-          <p>
-            We first set all images to a consistent 512x512 resolution. As such, training parameters were based on the size of the preprocessed images, as documented in the official implementations. SPADE-GAN additionally relies on segmentation masks to produce synthetic data. We used pre-existing annotations for ISIC-2018 and the Polyps Set. Because the Chest X-ray dataset did not have such annotations, masks were generated using TorchXRayVision [3]. All experiments were performed on one NVIDIA A100 and three NVIDIA A40 GPUs.
-          </p>
-
-          <h5 class="title is-5 has-text-left" style="margin-top: 0; margin-bottom: 0.5em;">Training and Generation</h5>
-          <p>
-            The experimental pipeline was designed to identify the role of image dataset size in the image generation fidelity of selected GANs, for which to be compared to the image complexity distribution of each dataset. To that end, for each GAN training run, all parameters were held constant with the exception of the image set size, which was subsequently set to 500, 1000, and 2500 images, randomly sampled from the same dataset for each experimental run, respectively. The pipeline was designed to incorporate 500 images as a baseline for GANs to train with limited data. We facilitated experiments with 2500 images for a more comprehensive training run to better capture the underlying image distribution and use an intermediary set of 1000 images serving as a middle ground. For StyleGAN 3, all experimental runs were trained for 100 epochs; for SPADE-GAN, training iterated 50 epochs. The trained adversarial network was then used to generate synthetic images, the fidelity of which was then evaluated for each training set size.
-          </p>
-
-          <h5 class="title is-5 has-text-left" style="margin-top: 0; margin-bottom: 0.5em;">Evaluation</h5>
-          <p>
-            The Fréchet Inception Distance (FID) [10] is a common metric used to evaluate the fidelity of the synthetically generated images for GANs [1]. Defined as the distance between the distributions of the ground truth and the generated images respectively, in our paper, we use the FID to assess the performance of the GAN (i.e. image fidelity) for each experimental run across both GANs. A lower FID score signifies that a GAN is more proficient at generating synthetic data close to its target distribution. From these data, we obtained fidelity curves for each dataset that describe how FID scores trend with increasing training set size.
-          </p>
-        </div>
       </div>
     </div>
-
-    <!-- Figure -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths has-text-justified">
-        <figure class="image" style="margin-top: 20px; margin-bottom: 20px;">
-          <img src="assets/Delentropy_Comparison.png" alt="Delentropy Distribution Comparison">
-          <figcaption style="padding-top: 25px;"><strong>Figure 2:</strong> Delentropy distributions across each medical image dataset. A higher mean delentropy \( \mu \) indicates a dataset with more complex images.</figcaption>
-        </figure>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -353,30 +324,43 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- Experimental Results -->
+    <!-- Datasets -->
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered">4. Experimental Results</h2>
+        <h2 class="title is-3 has-text-centered">Datasets</h2>
 
-        <!-- Datasets -->
-        <h5 class="title is-5 has-text-left">Datasets</h5>
         <div class="content has-text-justified">
           <p>
-            We employed three medical image datasets: International Skin Imaging Collaboration 2018 Challenge (ISIC-2018) [2], Chest X-Ray Images (Chest X-ray) [12], and Colonoscopy Polyp Detection and Classification (Polyps Set) [30]. These datasets were chosen for their diversity in both perceptual complexity, ranging from relatively skin lesions to complex colon polyps, and imaging modality (dermoscopy vs. x-ray vs. colonoscopy).
+            We employed <strong>three medical image datasets</strong>  chosen for their diversity in both perceptual complexity and imaging modality—dermascopy, x-ray, and colonoscopy.
           </p>
 
           <p>
-            We carried out delentropy calculations as described in Section 3 by using a publicly available implementation from Marchesoni [18]. To effectively capture the overall complexity of each image dataset, we captured each dataset’s delentropy distribution as displayed in Fig. 2.
+            1. <a href="https://challenge.isic-archive.com/data/#2018">International Skin Imaging Collaboration 2018 Challenge (ISIC-2018)</a>
+          </p>
+
+          <p>
+            2. <a href="https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia">Chest X-Ray Images (Chest X-ray)</a>
+          </p>
+
+          <p>
+            3. <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FCBUOR">Colonoscopy Polyp Detection and Classification (Polyps Set)</a>
           </p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- GAN Pipeline -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">GAN Pipeline</h2>
         <div class="content has-text-justified">
           <p>
-            Across the experimental runs, FID scores consistently decreased with increasing dataset size. On StyleGAN 3, synthesized images that had been generated by a GAN trained on 2500 images exhibited an average FID score reduction of 48% when compared to those generated by a StyleGAN 3 that had been trained on a mere 500 images (Fig. 3). SPADE-GAN experienced an analogous 31% FID score reduction on average, though it is worth noting that FID reduction plateaued after only 1000 training images.
-          </p>
-
-          <p>
-            Comparing both Fig. 2 and Fig. 3, one can see a general relationship between the delentropy distribution and the training performance of both GANs. As the spread of image complexities increases from a slender, peaked distribution to a broader, bimodal one, we see a corresponding increase in FID scores for each dataset sample size. The Chest X-ray dataset with the most homogeneous image complexities shown by a tall and narrow distribution, yields the lowest FID score after being trained for 2500 images, indicating that both GANs had easier training runs with this dataset. On the contrast, the Polyps Set—the dataset with the widest distribution and multiple complexity peaks—correlates with the highest FID scores for each dataset sample size, which suggests that the GAN was faced with a more challenging and unstable training run. Ultimately, this pattern shows a general inverse relationship—GAN performance decreases with an increasing spread of image complexities within a dataset.
+            <strong><mark style="background-color: yellow;">Goal:</mark></strong> To identify the role of image dataset size in the fidelity of generated images from Style GAN 3 and SPADE-GAN, for which to be compared to the delentropy (image complexity) distribution of each dataset.  
           </p>
         </div>
       </div>
@@ -385,55 +369,109 @@
     <!-- Figure -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths has-text-justified">
-        <figure class="image" style="margin-top: 20px; margin-bottom: 20px;">
-          <img src="assets/FID_Scores_Comparison.png" alt="FID Scores Comparison">
-          <figcaption style="padding-top: 25px;"><strong>Figure 3:</strong> Fréchet Inception Distance (FID) curves comparing StyleGAN 3 and SPADE-GAN across each medical image dataset with varying sample sizes. Lower FID scores correspond to higher fidelity synthetic images.</figcaption>
+        <figure class="image" style="margin-top: 20px; margin-bottom: 10px;">
+          <img src="assets/Synthesized_Images.png" alt="Synthesized Images Comparison" style="width: 80%; height: auto; display: block; margin: auto;">
+          <figcaption style="padding-top: 25px;"><em><strong>Figure 1:</strong> Comparison between original images and synthetic images from StyleGAN 3 and SPADE-GAN based on variable image set sizes.</em></figcaption>
         </figure>
       </div>
     </div>
 
-  </div>
-</section>
-<!-- Discussion -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">5. Discussion</h2>
         <div class="content has-text-justified">
+          <h5 class="title is-5 has-text-left" style="margin-top: 0px; margin-bottom: 0.5em;">Preprocessing</h5>
           <p>
-            SPADE-GAN outperformed StyleGAN 3 across all datasets and training sizes, with FID scores averaging 33% lower, likely due to its architecture that incorporates segmentation masks for structural information, whereas StyleGAN 3 trained on raw image data alone, making it more difficult to generalize to high-delentropy datasets. Moreover, ISIC-2018 being an outlier can be attributed to its fluctuations in image complexity, reflected by the standard deviation in delentropy (Fig. 2). Despite having a lower mean delentropy, its spread likely resulted in difficulties in GAN training and learning the images’ distribution, contrasting with the Chest X-ray dataset.
+            We first set all training images to a consistent <strong>512x512 resolution</strong>. As such, <strong>training parameters were based on the size of the preprocessed images</strong>, as documented in the official implementations. SPADE-GAN relies on segmentation masks, so we utilized pre-existing annotations or generated masks using TorchXRayVision.
           </p>
-          <p>
-            While the experimental results generally reflected an intuitive understanding of how image complexity and training data influence GAN training, the FID curves provide insightful details, offering a deeper perspective on these effects. SPADE-GAN exhibits both better quality results than StyleGAN 3 in the form of lower FID scores and more consistent training as evidenced by the smooth, non-overlapping FID curves (Fig. 3). As aforementioned, performance plateaued after 1000 training images, suggesting that additional training data past that point may not help increase GAN performance as measured by FID score. This is also apparent in the generated images themselves, which exhibit little perceptual difference between those generated after 1000 training images and those generated after 2500 (Fig. 1). Contrast this with the StyleGAN 3 curves, which do not reach any noticeable plateau between 500 and 2500 training images. In fact, the increasingly negative slope values of the StyleGAN 3 graphs imply that StyleGAN 3 begins to better capture the images’ features at a point past 1000 images, the exact whereabouts of which would need to be determined by a separate study.
-          </p>
-          <p>
-            The FID curves generated by this set of experiments set up a useful benchmark to which other potential training image data sets can be compared. For training sets that are of similar delentropy distributions and used to train StyleGAN 3 or SPADE-GAN, it is not unreasonable to predict that their training curves will be similar to those represented in Fig. 3, though many more training set sizes and image sets are required before a truly comprehensive representation can be reached.
-          </p>
-        </div>
 
-        <h5 class="title is-5 has-text-left">Broader Impacts</h5>
-        <div class="content has-text-justified">
+          <h5 class="title is-5 has-text-left" style="margin-top: 25px; margin-bottom: 0.5em;">Training and Generation</h5>
           <p>
-            Our research on GANs for medical image synthesis may have positive and negative societal implications. On the positive side, it can enhance healthcare outcomes by improving the training of machine learning models with realistic synthetic data, therefore protecting patient privacy. Contrarily, potential negative impacts include the risk of maliciously generating fraudulent synthetic data and the possibility of reinforcing biases due to a lack of diversity of representing patient populations. These considerations demonstrate the importance of addressing both the benefits and potential risks associated with the use of GANs in the medical domain.
+            Through our data-centric approach, StyleGAN 3 and SPADE-GAN were run with the official, publicly available implementations with default hyperparameters and no augmentations to each network’s architecture. For each GAN training run, image (training) set size was subsequently set to <strong>500 images</strong> (baseline), <strong>1000 images</strong> (middle ground), and <strong>2500 images</strong> (comprehensive), randomly sampled from the same dataset for each experimental run, respectively. For StyleGAN 3, all experimental runs were trained for 100 epochs; for SPADE-GAN, training iterated 50 epochs. The trained GAN was then used to generate synthetic medical images, the fidelity of which was then calculated for each training set size. All experiments were performed on one NVIDIA A100 and three NVIDIA A40 GPUs.
+          </p>
+
+          <h5 class="title is-5 has-text-left" style="margin-top: 25px; margin-bottom: 0.5em;">Evaluation</h5>
+          <p>
+            The <strong>Fréchet Inception Distance (FID)</strong> was used to evaluate the fidelity of the synthetically generated images for GANs (i.e. GAN performance) for each training set. It is defined as the distance between the distributions of the ground truth and the generated images. A <strong>lower FID score</strong> signifies that a GAN is <strong>more proficient</strong> at generating synthetic data close to its target distribution. From this, we obtained fidelity curves for each dataset that describe how FID scores trend with increasing training set size shown below.
           </p>
         </div>
+      </div>
+    </div>
+
+    <!-- Figure -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths has-text-justified">
+        <figure class="image" style="margin-top: 20px; margin-bottom: 0px;">
+          <img src="assets/FID_Scores_Comparison.png" alt="FID Scores Comparison">
+          <figcaption style="padding-top: 25px;"><em><strong>Figure 2:</strong> Fréchet Inception Distance (FID) curves comparing StyleGAN 3 and SPADE-GAN across each medical image dataset with varying sample sizes. Lower FID scores correspond to higher fidelity synthetic images.</em></figcaption>
+        </figure>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Conclusion -->
+
+
+
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
+
+    <!-- Results -->
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">6. Conclusion</h2>
+        <h2 class="title is-3 has-text-centered">Results</h2>
+
         <div class="content has-text-justified">
+          <h5 class="title is-5 has-text-left" style="margin-top: 25px; margin-bottom: 0.5em;">GAN Performance Comparison</h5>
           <p>
-            In this work, we highlight the impact of image complexity on GAN performance in medical image synthesis. We empirically demonstrate a general inverse relationship: higher image complexity leads to poorer image fidelity results and lesser performance in GANs. Furthermore, we demonstrate FID curves showing healthcare professionals the possibility for the use of our benchmarks to gauge an estimate of data training requirements to achieve desirable results based on the image complexity distribution of a medical image dataset.
+            Predictably, FID scores consistently decreased with increasing dataset size.
+          </p>
+          <p>
+            StyleGAN 3 trained on 2500 images reduced FID scores by a <strong>48%</strong> average, compared to when trained on 500 images. SPADE-GAN experienced an analogous <strong>31%</strong> FID score reduction on average.
+            <strong>SPADE-GAN outperformed StyleGAN 3 across all datasets and training sizes, with FID scores averaging 33% lower.</strong>
+          </p>
+          <p>
+            <strong><mark>Reason:</mark></strong> SPADE-GAN’s architecture used segmentation masks for extra structural information, compared to StyleGAN 3 which relied on raw data.
+          </p>
+
+          <h5 class="title is-5 has-text-left" style="margin-top: 25px; margin-bottom: 0.5em;">Delentropy Distributions</h5>
+
+          <p>
+            The graphs below show the distribution of image complexities (delentropies) for each image in each medical image dataset, respectively.
           </p>
         </div>
+    
+      </div>
+    </div>
+
+    <!-- Figure -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths has-text-justified">
+        <figure class="image" style="margin-top: 0px; margin-bottom: 10px;">
+          <img src="assets/Delentropy_Comparison.png" alt="Delentropy Distribution Comparison">
+          <figcaption style="padding-top: 25px;"><em><strong>Figure 3:</strong> Delentropy distributions across each medical image dataset. A higher mean delentropy \( \mu \) indicates a dataset with more complex images.</em></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+
+        <div class="content has-text-justified">
+          <p>
+            The Chest X-ray dataset (homogeneous distribution) yields the <strong>lowest FID scores</strong>—indicates that GANs had <strong>easier training runs</strong>  with this dataset. The Polyps Set (widest distribution and more complex images) correlates with the <strong>highest FID scores</strong>—suggests that GANs had more <strong>challenging training runs</strong> with this dataset. 
+          </p>
+          <p>
+            <strong><mark>Insight:</mark></strong> Shows an inverse relationship—GAN performance decreases with an increasing spread of image complexities within a dataset.
+          </p>
+          <h5 class="title is-5 has-text-left" style="margin-top: 25px; margin-bottom: 0.5em;">FID Curve Analysis</h5>
+          <p>
+            SPADE-GAN outperformed StyleGAN 3 with lower FID scores and smoother, non-overlapping FID curves. Performance plateaued after 1000 images, with little perceptual improvement in generated images as shown in the comparison of synthetic images. StyleGAN 3's performance did not plateau between 500 and 2500 images. FID scores showed increasingly negative slopes, indicating improved feature capture beyond 1000 images.
+          </p>
+          <p>
+            <strong><mark>Insight:</mark></strong> FID curves serve as benchmarks for datasets with comparable delentropy distributions and SOTA GAN models.
+          </p>
+        </div>
+    
       </div>
     </div>
   </div>
@@ -444,10 +482,38 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">7. Limitations</h2>
+        <h2 class="title is-3">Limitations</h2>
         <div class="content has-text-justified">
           <p>
-            Due to limited resources, experiments were only run on 500, 1000, and 2500 training images, leading to coarse-grained results. An extended study with a larger range and finer-grained increments would better elucidate exactly how FID scores respond to changes in training image dataset size. The use of FID scores as a sole evaluation metric also has its limitations, not necessarily correlating with human perceptual interpretations, something that is extremely important in the medical field where human doctors are still largely the source of truth. Skandarani et al. [29] shows that a lower FID score may not be a good measure of how well synthetic images can perform on a downstream task as well. Although this study specifically focused on GANs as the primary generative model, similar experiments extrapolated across other generative models such as stable diffusion may prove more relevant in the context of recent advancements in generative AI. More research with larger resources involving multiple evaluations of a similar experimental setup is required.
+            Due to limited resources, training set sizes were constraint to only 500, 1000, and 2500 images leading to coarse-grained results.
+          </p>
+          <p>
+            FID was used as the sole evaluation metric—may not be a good measure of how well synthetic images perform on a downstream task.
+          </p>
+          <p>
+            A study using other generative AI such as <strong>VAEs</strong>, <strong>autoregressive models</strong>, and <strong>diffusion models</strong> may provide more significant insights.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contributions -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Contributions</h2>
+        <div class="content has-text-justified">
+          <p>
+            1. We empirically prove that higher image complexity leads to poorer image fidelity and lesser performance in GANs.
+          </p>
+          <p>
+            2. We demonstrate that given a dataset of a similar delentropy distribution, healthcare professionals can reference our benchmarks of the closest image fidelity curve to gain an estimate of the optimal training set sizes to produce desired image quality results.
+          </p>
+          <p>
+            3. We show the potential for studies using a data-centric approach with image complexity as a guide for model training—more thorough experiments are required before a truly comprehensive representation can be reached.
           </p>
         </div>
       </div>
@@ -471,117 +537,28 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">References</h2>
-        <div class="content has-text-justified">
-          <p>[1] Borji, A.: Pros and cons of gan evaluation measures: New developments. Computer Vision and Image Understanding 215, 103329 (2022). <a href="https://doi.org/10.1016/j.cviu.2021.103329">https://doi.org/10.1016/j.cviu.2021.103329</a>, <a href="https://www.sciencedirect.com/science/article/pii/S1077314221001685">ScienceDirect Link</a></p>
-
-          <p>[2] Codella, N., et al.: Skin lesion analysis toward melanoma detection 2018: A challenge hosted by the international skin imaging collaboration (isic) (2018), <a href="https://arxiv.org/abs/1902.03368">https://arxiv.org/abs/1902.03368</a></p>
-
-          <p>[3] Cohen, J.P., et al.: TorchXRayVision: A library of chest X-ray datasets and models. In: Medical Imaging with Deep Learning (2022), <a href="https://github.com/mlmed/torchxrayvision">https://github.com/mlmed/torchxrayvision</a></p>
-
-          <p>[4] Gao, P., Li, Z., Zhang, H.: Thermodynamics-based evaluation of various improved shannon entropies for configurational information of gray-level images. Entropy 20(1) (2018). <a href="https://doi.org/10.3390/e20010019">https://doi.org/10.3390/e20010019</a>, <a href="https://www.mdpi.com/1099-4300/20/1/19">MDPI Link</a></p>
-
-          <p>[5] Gilbert, A., et al.: Generating synthetic labeled data from existing anatomical models: An example with echocardiography segmentation. IEEE Transactions on Medical Imaging 40(10), 2783–2794 (2021). <a href="https://doi.org/10.1109/TMI.2021.3051806">https://doi.org/10.1109/TMI.2021.3051806</a></p>
-
-          <p>[6] Goodfellow, I., et al.: Generative adversarial nets. Advances in neural information processing systems 27 (2014)</p>
-
-          <p>[7] Graham, S., et al.: Artificial intelligence for mental health and mental illnesses: an overview. Current psychiatry reports 21, 1–18 (2019)</p>
-
-          <p>[8] Guo, X., Chen, Y.: Generative ai for synthetic data generation: Methods, challenges and the future. arXiv preprint arXiv:2403.04190 (2024)</p>
-
-          <p>[9] Haralick, R.M., et al.: Textural features for image classification. IEEE Transactions on Systems, Man, and Cybernetics SMC-3(6), 610–621 (1973). <a href="https://doi.org/10.1109/TSMC.1973.4309314">https://doi.org/10.1109/TSMC.1973.4309314</a></p>
-
-          <p>[10] Heusel, M., et al.: Gans trained by a two time-scale update rule converge to a local nash equilibrium. In: Advances in Neural Information Processing Systems (NeurIPS). vol. 30 (2017), <a href="https://arxiv.org/abs/1706.08500">https://arxiv.org/abs/1706.08500</a></p>
-
-          <p>[11] Karras, T., et al.: Analyzing and improving the image quality of stylegan (2020), <a href="https://arxiv.org/abs/1912.04958">https://arxiv.org/abs/1912.04958</a>, licensed under the Nvidia Source Code License.</p>
-
-          <p>[12] Kermany, D., et al.: Labeled optical coherence tomography (oct) and chest x-ray images for classification (2018). <a href="https://doi.org/10.17632/rscbjbr9sj.2">https://doi.org/10.17632/rscbjbr9sj.2</a>, licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.</p>
-
-          <p>[13] Khan, T.M., et al.: Leveraging image complexity in macro-level neural network design for medical image segmentation. Scientific Reports 12 (2022). <a href="https://doi.org/10.1038/s41598-022-26482-7">https://doi.org/10.1038/s41598-022-26482-7</a></p>
-
-          <p>[14] Khan, Z.F., Alotaibi, S.R.: Computerised segmentation of medical images using neural networks and glcm. In: 2019 International Conference on Advances in the Emerging Computing Technologies (AECT). pp. 1–5 (2020). <a href="https://doi.org/10.1109/AECT47998.2020.9194196">https://doi.org/10.1109/AECT47998.2020.9194196</a></p>
-
-          <p>[15] Larkin, K.G.: Reflections on shannon information: In search of a natural information-entropy for images (2016), <a href="https://arxiv.org/abs/1609.01117">https://arxiv.org/abs/1609.01117</a></p>
-
-          <p>[16] Liu, S., et al.: Contrastive learning for image complexity representation (2024), <a href="https://arxiv.org/abs/2408.03230">https://arxiv.org/abs/2408.03230</a></p>
-
-          <p>[17] Lu, Y., et al.: Machine learning for synthetic data generation: A review (2024), <a href="https://arxiv.org/abs/2302.04062">https://arxiv.org/abs/2302.04062</a></p>
-
-          <p>[18] Marchesoni, F.: How do i know if an image after image enhancement is better than before? (March 2023), <a href="https://ai.stackexchange.com/questions/39483/how-do-i-know-if-image-after-image-enhancement-is-better-than-before-image-pre">AI StackExchange Link</a></p>
-
-          <p>[19] Nordon, G., et al.: Separating wheat from chaff: joining biomedical knowledge and patient data for repurposing medications. In: Proceedings of the AAAI Conference on Artificial Intelligence. vol. 33, pp. 9565–9572 (2019)</p>
-
-          <p>[20] Pan, Z., et al.: Recent progress on generative adversarial networks (gans): A survey. IEEE access 7, 36322–36333 (2019)</p>
-
-          <p>[21] Papoulis, A.: Generalized sampling expansion. IEEE Transactions on Circuits and Systems 24(11), 652–654 (1977). <a href="https://doi.org/10.1109/TCS.1977.1084284">https://doi.org/10.1109/TCS.1977.1084284</a></p>
-
-          <p>[22] Park, T., et al.: Semantic image synthesis with spatially-adaptive normalization (2019), <a href="https://arxiv.org/abs/1903.07291">https://arxiv.org/abs/1903.07291</a>, licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license.</p>
-
-          <p>[23] Pezoulas, V.C., et al.: Synthetic data generation methods in healthcare: A review on open-source tools and methods. Computational and Structural Biotechnology Journal 23, 2892–2910 (2024). <a href="https://doi.org/10.1016/j.csbj.2024.07.005">https://doi.org/10.1016/j.csbj.2024.07.005</a>, <a href="https://www.sciencedirect.com/science/article/pii/S2001037024002393">ScienceDirect Link</a></p>
-
-          <p>[24] Rahman, S., et al.: The significance of machine learning in clinical disease diagnosis: A review. arXiv preprint arXiv:2310.16978 (2023)</p>
-
-          <p>[25] Robb, E., et al.: Few-shot adaptation of generative adversarial networks. arXiv preprint arXiv:2010.11943 (2020)</p>
-
-          <p>[26] Shang, J., et al.: Pre-training of graph augmented transformers for medication recommendation. arXiv preprint arXiv:2105.00449 (2021)</p>
-
-          <p>[27] Shorten, C., Khoshgoftaar, T.M.: A survey on image data augmentation for deep learning. Journal of Big Data 6, 1–48 (2019)</p>
-
-          <p>[28] Skandarani, Y., et al.: GANs for medical image synthesis: An empirical study on brain MRI (2021), <a href="https://arxiv.org/abs/2111.14715">https://arxiv.org/abs/2111.14715</a></p>
-
-          <p>[29] Wang, Z., et al.: Image quality assessment: From error visibility to structural similarity. IEEE Transactions on Image Processing 13(4), 600–612 (2004)</p>
-
-          <p>[30] Wu, W., et al.: A survey on recent studies of deep learning based image super-resolution (2020). <a href="https://doi.org/10.1109/ACCESS.2020.2975292">https://doi.org/10.1109/ACCESS.2020.2975292</a></p>
-
-          <p>[31] Xu, T., et al.: AttnGAN: Fine-grained text to image generation with attentional generative adversarial networks. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR). pp. 1316–1324 (2018)</p>
-
-          <p>[32] Yang, J., et al.: Image complexity guided deep network pruning. IEEE Transactions on Pattern Analysis and Machine Intelligence (2024)</p>
-
-          <p>[33] Zhuang, F., et al.: A comprehensive survey on transfer learning. Proceedings of the IEEE 109(1), 43–76 (2020)</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>
-      @InProceedings{Cagas_2024_ACCV,
-        author    = {Cagas, William and Ko, Chan and Hsiao, Blake and Grandhi, Shryuk and Bhattacharya, Rishi and Zhu, Kevin and Lam, Michael},
-        title     = {Medical Imaging Complexity and its Effects on GAN Performance},
-        booktitle = {Proceedings of the Asian Conference on Computer Vision (ACCV) Workshops},
-        month     = {December},
-        year      = {2024},
-        pages     = {207-217}
-      }
-    </code></pre>
+    <pre><code>@InProceedings{Cagas_2024_ACCV,
+    author    = {Cagas, William and Ko, Chan and Hsiao, Blake and Grandhi, Shryuk and Bhattacharya, Rishi and Zhu, Kevin and Lam, Michael},
+    title     = {Medical Imaging Complexity and its Effects on GAN Performance},
+    booktitle = {Proceedings of the Asian Conference on Computer Vision (ACCV) Workshops},
+    month     = {December},
+    year      = {2024},
+    pages     = {207-217}
+}</code></pre>
   </div>
 </section>
 
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="https://arxiv.org/pdf/2410.17959">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/willcagas/Synthetic-Medical-Image-Generation" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            The source code from this website is borrowed from this <a
+            The source code from this website was adapted from this <a
             href="https://github.com/nerfies/nerfies.github.io">template</a>.
           </p>
         </div>

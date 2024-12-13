@@ -146,6 +146,15 @@
               </span>
             </div>
 
+             <!-- Figure -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths has-text-justified">
+                <figure class="image" style="margin-top: 75px;">
+                  <img src="assets/Synthesized_Images.png" alt="Synthesized Images Comparison" style="width: 100%; height: auto; display: block; margin: auto;">
+                  <figcaption style="margin-top: 15px; font-size: 90%;"><em>Comparison between original images and synthetic images from StyleGAN 3 and SPADE-GAN based on variable training set sizes across various medical image datasets.</em></figcaption>
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -158,6 +167,7 @@
     <!-- Problem Statement. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+       
         <h2 class="title is-3">Problem Statement</h2>
         <div class="content has-text-justified">
           <p>
@@ -180,7 +190,7 @@
 
         <div class="content has-text-justified">
           <p>
-            We propose a <strong>data-centric optimization method</strong> for efficient GAN training in medical image synthesis using state-of-the-art GANs—StyleGAN 3 and SPADE-GAN—based on the relationship between the <strong>image complexity distribution</strong> of a dataset, and variable training set sizes that correspond to the fidelity of synthetic images.
+            We propose a <strong>data-centric optimization method</strong> for efficient GAN training in medical image synthesis using state-of-the-art GANs—StyleGAN 3 and SPADE-GAN—based on the relationship between the <strong>image complexity distribution</strong> of a dataset, and variable training set sizes corresponding to the fidelity of synthetic images.
           </p>
         </div>
       </div>
@@ -310,7 +320,6 @@
   </div>
 </section>
 
-
 <!-- <section class="section">
   <div class="container is-max-desktop">
 
@@ -350,19 +359,9 @@
         <h2 class="title is-3 has-text-centered">GAN Pipeline</h2>
         <div class="content has-text-justified">
           <p>
-            <strong><mark style="background-color: yellow;">Goal:</mark></strong> To identify the role of image dataset size in the fidelity of generated images from Style GAN 3 and SPADE-GAN, for which to be compared to the delentropy (image complexity) distribution of each dataset.  
+            The <strong>goal of our pipeline</strong> is to identify the role of image dataset size in the fidelity of generated images from Style GAN 3 and SPADE-GAN, for which to be compared to the delentropy (image complexity) distribution of each dataset.  
           </p>
         </div>
-      </div>
-    </div>
-
-    <!-- Figure -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths has-text-justified">
-        <figure class="image" style="margin-top: 20px; margin-bottom: 10px;">
-          <img src="assets/Synthesized_Images.png" alt="Synthesized Images Comparison" style="width: 80%; height: auto; display: block; margin: auto;">
-          <figcaption style="padding-top: 25px;"><em><strong>Figure 1:</strong> Comparison between original images and synthetic images from StyleGAN 3 and SPADE-GAN based on variable image set sizes.</em></figcaption>
-        </figure>
       </div>
     </div>
 
@@ -371,17 +370,17 @@
         <div class="content has-text-justified">
           <h5 class="title is-5 has-text-left" style="margin-top: 0px; margin-bottom: 0.5em;">Preprocessing</h5>
           <p>
-            We first set all training images to a consistent <strong>512x512 resolution</strong>. As such, <strong>training parameters were based on the size of the preprocessed images</strong>, as documented in the official implementations. SPADE-GAN relies on segmentation masks, so we utilized pre-existing annotations or generated masks using TorchXRayVision.
+            We first set all training images to a consistent <strong>512x512 resolution</strong>. As such, <strong>training parameters</strong> were based on the <strong>size of the preprocessed images</strong>, as documented in the GANs' official implementations. SPADE-GAN relies on segmentation masks, so we utilized pre-existing annotations or generated masks using TorchXRayVision.
           </p>
 
           <h5 class="title is-5 has-text-left" style="margin-top: 25px; margin-bottom: 0.5em;">Training and Generation</h5>
           <p>
-            Through our data-centric approach, StyleGAN 3 and SPADE-GAN were run with the official, publicly available implementations with default hyperparameters and no augmentations to each network’s architecture. For each GAN training run, image (training) set size was subsequently set to <strong>500 images</strong> (baseline), <strong>1000 images</strong> (middle ground), and <strong>2500 images</strong> (comprehensive), randomly sampled each run. The trained GAN was then used to generate synthetic medical images, which the fidelity was evaluated for each training set size.
+            Through our data-centric approach, StyleGAN 3 and SPADE-GAN were run with the official, <strong>publicly available implementations</strong> with <strong>default hyperparameters</strong> and <strong>no augmentations</strong> to each network’s architecture. For each GAN training run, image (training) set size was subsequently set to <strong>500 images</strong> (baseline), <strong>1000 images</strong> (middle ground), and <strong>2500 images</strong> (comprehensive), randomly sampled each run. The trained GAN was then used to generate synthetic medical images, which the fidelity was evaluated for each training set size.
           </p>
 
           <h5 class="title is-5 has-text-left" style="margin-top: 25px; margin-bottom: 0.5em;">Evaluation</h5>
           <p>
-            The <strong>Fréchet Inception Distance (FID)</strong> was used to evaluate the fidelity of the synthetically generated images for GANs (i.e. GAN performance) for each training set. It is defined as the distance between the distributions of the ground truth and the generated images. A <strong>lower FID score</strong> signifies that a GAN is <strong>more proficient</strong> at generating synthetic data close to its target distribution. From this, we obtained fidelity curves for each dataset that describe how FID scores trend with increasing training set size shown below.
+            The <strong>Fréchet Inception Distance (FID)</strong> was used to evaluate the fidelity of the synthetically generated images for GANs (i.e. GAN performance) for each training set. A <strong>lower FID score</strong> signifies that a GAN is <strong>more proficient</strong> at generating synthetic data close to its target distribution. From this, we obtained fidelity curves for each dataset that describe how FID scores trend with increasing training set size shown below.
           </p>
         </div>
       </div>
@@ -390,9 +389,9 @@
     <!-- Figure -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths has-text-justified">
-        <figure class="image" style="margin-top: 20px; margin-bottom: 0px;">
+        <figure class="image" style="margin-top: 20px;">
           <img src="assets/FID_Scores_Comparison.png" alt="FID Scores Comparison">
-          <figcaption style="padding-top: 25px;"><em><strong>Figure 2:</strong> Fréchet Inception Distance (FID) curves comparing StyleGAN 3 and SPADE-GAN across each medical image dataset with varying sample sizes. Lower FID scores correspond to higher fidelity synthetic images.</em></figcaption>
+          <figcaption style="margin-top: 15px; font-size: 90%;"><em>Fréchet Inception Distance (FID) curves comparing StyleGAN 3 and SPADE-GAN across each medical image dataset with varying sample sizes. Lower FID scores correspond to higher fidelity synthetic images.</em></figcaption>
         </figure>
       </div>
     </div>
@@ -433,9 +432,9 @@
     <!-- Figure -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths has-text-justified">
-        <figure class="image" style="margin-top: 0px; margin-bottom: 10px;">
+        <figure class="image" style="margin-top: 0px;">
           <img src="assets/Delentropy_Comparison.png" alt="Delentropy Distribution Comparison">
-          <figcaption style="padding-top: 25px;"><em><strong>Figure 3:</strong> Delentropy distributions across each medical image dataset. A higher mean delentropy \( \mu \) indicates a dataset with more complex images.</em></figcaption>
+          <figcaption style="margin-top: 15px; font-size: 90%;"><em>Delentropy distributions across each medical image dataset. A higher mean delentropy \( \mu \) indicates a dataset with more complex images.</em></figcaption>
         </figure>
       </div>
     </div>
